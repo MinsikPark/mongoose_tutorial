@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-modeul.export = () => {
+module.exports = () => {
 
     const connect = () => {
         if( process.env.NODE_ENV !== 'production') {

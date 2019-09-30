@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const { Types : {ObjectId}} = Schema;
 
 const commnectSchema = new Schema({
     commneter : {
