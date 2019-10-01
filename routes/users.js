@@ -1,5 +1,5 @@
 var express = require('express');
-var User = require('./schemas/user');
+var User = require('../schemas/user');
 var router = express.Router();
 
 /* GET users listing. */
@@ -20,8 +20,8 @@ router.post('/', async function(req, res, next) {
       age : req.body.age,
       married : req.body.married
     })
-    const result = await User.save(user);
-    res.json(result);
+    const result = await user.save(user);
+    res.status(201).json(result);
   } catch (err) {
     console.error( err);
     next();
